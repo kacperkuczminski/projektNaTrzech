@@ -85,7 +85,7 @@ class FileAnalyzer extends Component<FileAnalyzerProps, FileAnalyzerState> {
   <span>Wybierz plik</span>
   <input type="file" onChange={this.handleFileChange} />
 </label>
-          <button onClick={this.handleFileUpload}>Wyślij</button>
+          <button className="buttonWyslij" onClick={this.handleFileUpload}>Oblicz</button>
         </div>
 
         <div className="file-analyzer__content">
@@ -113,6 +113,19 @@ class FileAnalyzer extends Component<FileAnalyzerProps, FileAnalyzerState> {
   font-family: Arial, sans-serif;
 }
 
+.buttonWyslij{
+padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.buttonWyslij:hover{
+background-color: #4CA350;
+}
+
 .file-analyzer__header {
   margin-bottom: 16px;
 }
@@ -133,7 +146,7 @@ class FileAnalyzer extends Component<FileAnalyzerProps, FileAnalyzerState> {
 
 .file-analyzer__header label {
   padding: 8px 16px;
-  background-color: #4CAF50;
+  background-color: #4CAFFF;
   color: white;
   border: none;
   border-radius: 4px;
@@ -142,7 +155,7 @@ class FileAnalyzer extends Component<FileAnalyzerProps, FileAnalyzerState> {
 }
 
 .file-analyzer__header label:hover {
-  background-color: #45a049;
+  background-color: #45a0FF;
 }
 
 .file-analyzer__header label input[type="file"] {
